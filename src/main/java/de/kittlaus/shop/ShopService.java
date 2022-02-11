@@ -5,9 +5,9 @@ public class ShopService {
     private OrderRepo myOrders;
     private ProductRepo myProducts;
 
-    public ShopService() {
-        myOrders = new OrderRepo();
-        myProducts = new ProductRepo();
+    public ShopService(OrderRepo orderRepo, ProductRepo productRepo) {
+        myOrders = orderRepo;
+        myProducts = productRepo;
     }
 
     public void getProduct(){
